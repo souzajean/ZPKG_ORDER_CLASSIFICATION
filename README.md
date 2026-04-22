@@ -11,9 +11,10 @@ The solution receives an XML payload via HTTP, extracts data using XPath, applie
 
 A backend system sends order data that must be:
 
-Validated
-Classified based on amount
-Enriched with processing information
+Validated   
+Classified based on amount   
+Enriched with processing information   
+
 🧩 iFlow Architecture
 
 HTTPS Sender → Content Modifier (Properties) → Groovy Script → Content Modifier (XML) → Logging → HTTPS Response
@@ -50,11 +51,11 @@ Logs final payload in Message Monitoring
     <ProcessedAt>2026-04-22 10:00:00</ProcessedAt>
 </ProcessedOrder>
 🧠 Key Features
-✔️ XPath-based data extraction
-✔️ Business rules with Groovy Script
-✔️ XML transformation using Content Modifier
-✔️ Payload logging for monitoring
-✔️ Parameter externalization ready
+✔️ XPath-based data extraction   
+✔️ Business rules with Groovy Script   
+✔️ XML transformation using Content Modifier   
+✔️ Payload logging for monitoring   
+✔️ Parameter externalization ready   
 💡 Technical Highlights
 Separation of concerns (Extraction vs Logic vs Transformation)
 Use of Exchange Properties for stability
