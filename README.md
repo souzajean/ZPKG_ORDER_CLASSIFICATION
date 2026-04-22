@@ -50,6 +50,7 @@ Logs final payload in Message Monitoring
     <Status>PROCESSED</Status>
     <ProcessedAt>2026-04-22 10:00:00</ProcessedAt>
 </ProcessedOrder>
+
 🧠 Key Features
 ✔️ XPath-based data extraction   
 ✔️ Business rules with Groovy Script   
@@ -57,16 +58,20 @@ Logs final payload in Message Monitoring
 ✔️ Payload logging for monitoring   
 ✔️ Parameter externalization ready   
 💡 Technical Highlights
+
 Separation of concerns (Extraction vs Logic vs Transformation)
 Use of Exchange Properties for stability
 Avoidance of inline XPath in XML (best practice)
-🚀 Endpoint
+
+🚀 Endpoint   
 POST /order/classify
 🧪 How to Test (Postman)
 Method: POST
 URL: /order/classify
 Body: XML
 Send request and validate response
-📷 Preview
+
+
+📷 Preview   
 
 Add your iFlow screenshot here
