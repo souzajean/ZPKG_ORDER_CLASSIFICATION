@@ -87,7 +87,7 @@ Nome: CM_setProperty
 <br>
 
 ### ⚙️ Configuração do Content Modifier
-📩 Message Header
+📩 Exchange Properties
 ```
 | Name        | Source Type | Source Value        | Data Type        |
 |-------------|-------------|---------------------|------------------|
@@ -114,6 +114,35 @@ O parâmetro abaixo foi externalizado para facilitar manutenção e reutilizaç�
 
 <br>
 
+# 🔹 3. Groovy Script
+Classifica o pedido com base no valor:
+
+- LOW → BAIXO   
+- MEDIUM → MÉDIO
+- HIGH → ALTO
+
+### ➕ Adicionando Groovy Script
+![Fluxo](imagens/Screenshot_11.png)
+
+<br>
+
+### 🏷️ Renomeando o Groovy Script
+![Fluxo](imagens/Screenshot_19.png)
+```
+GS_Classificacao
+```
+
+<br>
+
+### ➕ Adicionando Groovy Script
+![Fluxo](imagens/Screenshot_20.png)
+
+<br>
+
+Classifies order based on amount:
+LOW
+MEDIUM
+HIGH
 
 
 
@@ -125,15 +154,10 @@ O parâmetro abaixo foi externalizado para facilitar manutenção e reutilizaç�
     <Amount>750</Amount>
     <Region>SP</Region>
 </Order>
-⚙️ Processing Steps
-1. Content Modifier (Extract Properties)
-Extracts values using XPath
-Stores data in Exchange Properties
-2. Groovy Script (Business Logic)
-Classifies order based on amount:
-LOW
-MEDIUM
-HIGH
+
+
+
+
 3. Content Modifier (Build Response)
 Constructs final XML response
 Adds timestamp and status
