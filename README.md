@@ -99,6 +99,20 @@ Message Header
 |  region   | XPath       | /Order/Region       | java.lang.String |
 
 ```
+```
+## 📩 Message Header
+
+| Name        | Source Type | Source Value        | Data Type        |
+|-------------|------------|---------------------|------------------|
+| status      | Constant   | {{PROCESSED}}       |                  |
+| orderId     | XPath      | /Order/OrderID      | java.lang.String |
+| customerId  | XPath      | /Order/CustomerID   | java.lang.String |
+| amount      | XPath      | /Order/Amount       | java.lang.String |
+| region      | XPath      | /Order/Region       | java.lang.String |
+
+```
+
+
 ![Fluxo](imagens/Screenshot_9.png)
 
 <br>
