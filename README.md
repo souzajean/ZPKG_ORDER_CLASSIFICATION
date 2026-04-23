@@ -98,13 +98,15 @@ Nome: CM_setProperty
 | region      | XPath       | /Order/Region       | java.lang.String |
 
 ```
-
-
 ![Fluxo](imagens/Screenshot_9.png)
 
 <br>
 
+### ⚙️ Externalizadno o parametos 
+PROCESSED
+![Fluxo](imagens/Screenshot_10.png)
 
+<br>
 
 
 
