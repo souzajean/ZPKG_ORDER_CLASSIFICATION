@@ -251,10 +251,10 @@ def Message processData(Message message) {
 # 🔹 7. Postman
 
 ### ➕ Enviando o Payload
-📥 Enviando Payload
-Method: POST
-URL: /order/classify
-Body:
+📥 Enviando Payload   
+- Method: **POST**   
+- URL: **/order/classify**   
+- Body:   
 ```
 <Order>
     <OrderID>5001</OrderID>
