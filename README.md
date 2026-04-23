@@ -205,9 +205,9 @@ Adiciona timestamp (data/hora) e status
 Registra o payload final no Message Monitoring
 
 📤 Payload de Saída
-5001 2002 750 SP MEDIUM PROCESSED 2026-04-22 10:00:00
-🧠 Principais Funcionalidades
+5001 2002 750 SP MEDIUM PROCESSED 2026-04-22 10:00:00   
 
+🧠 Principais Funcionalidades   
 ✔️ Extração de dados baseada em XPath   
 ✔️ Regras de negócio com Script Groovy   
 ✔️ Transformação de XML utilizando Content Modifier   
