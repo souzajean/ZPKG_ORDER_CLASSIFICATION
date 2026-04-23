@@ -248,6 +248,71 @@ def Message processData(Message message) {
 
 <br>
 
+# 🔹 7. Content Modifier
+
+### ➕ Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_14.png)
+
+<br>
+
+### 🏷️ Renomeando o Content Modifier
+```
+Nome: CM_XMLFinal
+```
+![Fluxo](imagens/Screenshot_15.png)
+
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+Construindo a resposta final em XML
+Adiciona timestamp (data/hora) e status   
+
+📩 Message Body
+- **Type:** Expression  
+- **Body:**
+```
+<ProcessedOrder>
+    <OrderID>${property.orderId}</OrderID>
+    <CustomerID>${property.customerId}</CustomerID>
+    
+    <Amount>${property.amount}</Amount>
+    <Region>${property.region}</Region>
+    
+    <Category>${property.category}</Category>
+    
+    <Status>${property.status}</Status>
+    <ProcessedAt>${date:now:yyyy-MM-dd HH:mm:ss}</ProcessedAt>
+</ProcessedOrder>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 📥 Input Payload
 <Order>
@@ -263,8 +328,8 @@ def Message processData(Message message) {
 
 
 4. Logging (Groovy)
-Logs final payload in Message Monitoring
-📤 Output Payload
+
+📤 Saída Payload
 <ProcessedOrder>
     <OrderID>5001</OrderID>
     <CustomerID>2002</CustomerID>
@@ -275,17 +340,7 @@ Logs final payload in Message Monitoring
     <ProcessedAt>2026-04-22 10:00:00</ProcessedAt>
 </ProcessedOrder>
 
-🧠 Key Features
-✔️ XPath-based data extraction   
-✔️ Business rules with Groovy Script   
-✔️ XML transformation using Content Modifier   
-✔️ Payload logging for monitoring   
-✔️ Parameter externalization ready   
-💡 Technical Highlights
 
-Separation of concerns (Extraction vs Logic vs Transformation)
-Use of Exchange Properties for stability
-Avoidance of inline XPath in XML (best practice)
 
 🚀 Endpoint   
 POST /order/classify
@@ -296,6 +351,4 @@ Body: XML
 Send request and validate response
 
 
-📷 Preview   
 
-Add your iFlow screenshot here
