@@ -109,6 +109,7 @@ O parâmetro abaixo foi externalizado para facilitar manutenção e reutilizaç�
 | Parâmetro  | Valor Padrão |
 |------------|--------------|
 | PROCESSED  | PROCESSED    |
+
 ![Fluxo](imagens/Screenshot_10.png)
 
 <br>
