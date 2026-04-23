@@ -135,6 +135,27 @@ GS_Classificacao
 <br>
 
 ### ➕ Lógica do ordem de classificação
+```
+import com.sap.gateway.ip.core.customdev.util.Message
+
+def Message processData(Message message) {
+
+    def amountStr = message.getProperty("amount")
+    def amount = amountStr ? amountStr.toInteger() : 0
+
+    def category = "LOW"
+
+    if(amount > 1000){
+        category = "HIGH"
+    } else if(amount > 500){
+        category = "MEDIUM"
+    }
+
+    message.setProperty("category", category)
+    return message
+}
+```
+
 ![Fluxo](imagens/Screenshot_13.png)
 
 <br>
@@ -156,6 +177,9 @@ Nome: CM_XMLFinal
 <br>
 
 ### ⚙️ Configuração do Content Modifier
+Construindo a resposta final em XML
+Adiciona timestamp (data/hora) e status   
+
 📩 Message Body
 - **Type:** Expression  
 - **Body:**
@@ -177,7 +201,45 @@ Nome: CM_XMLFinal
 
 <br>
 
+# 🔹 6. Groovy Script
+Classifica o pedido com base no valor:
 
+- LOW → BAIXO   
+- MEDIUM → MÉDIO
+- HIGH → ALTO
+
+### ➕ Adicionando Groovy Script
+![Fluxo](imagens/Screenshot_17.png)
+
+<br>
+
+### 🏷️ Renomeando o Groovy Script
+![Fluxo](imagens/Screenshot_18.png)
+```
+GS_Log_Payload_Final
+```
+
+<br>
+
+### ➕ Lógica do ordem de classificação
+```
+import com.sap.gateway.ip.core.customdev.util.Message
+
+def Message processData(Message message) {
+
+    def body = message.getBody(String)
+
+    def messageLog = messageLogFactory.getMessageLog(message)
+    if(messageLog != null){
+        messageLog.addAttachmentAsString("Payload Final", body, "text/xml")
+    }
+
+    return message
+}
+```
+![Fluxo](imagens/Screenshot_19.png)
+
+<br>
 
 
 📥 Input Payload
@@ -191,9 +253,8 @@ Nome: CM_XMLFinal
 
 
 
-3. Content Modifier (Build Response)
-Constructs final XML response
-Adds timestamp and status
+
+
 4. Logging (Groovy)
 Logs final payload in Message Monitoring
 📤 Output Payload
