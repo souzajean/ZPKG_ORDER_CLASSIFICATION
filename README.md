@@ -264,10 +264,25 @@ def Message processData(Message message) {
 
 <br>
 
-
-
+### Resultado Payload
+📤 Saída Payload
+```
+<ProcessedOrder>
+    <OrderID>5001</OrderID>
+    <CustomerID>2002</CustomerID>
+    <Amount>750</Amount>
+    <Region>SP</Region>
+    <Category>MEDIUM</Category>
+    <Status>PROCESSED</Status>
+    <ProcessedAt>2026-04-22 10:00:00</ProcessedAt>
+</ProcessedOrder>
+```
 
 ![Fluxo](imagens/Screenshot_21.png)
+
+<br>
+
+# 🔹 8. Monitoramento
 
 
 ![Fluxo](imagens/Screenshot_22.png)
@@ -302,19 +317,6 @@ def Message processData(Message message) {
 
 
 
-
-4. Logging (Groovy)
-
-📤 Saída Payload
-<ProcessedOrder>
-    <OrderID>5001</OrderID>
-    <CustomerID>2002</CustomerID>
-    <Amount>750</Amount>
-    <Region>SP</Region>
-    <Category>MEDIUM</Category>
-    <Status>PROCESSED</Status>
-    <ProcessedAt>2026-04-22 10:00:00</ProcessedAt>
-</ProcessedOrder>
 
 
 
