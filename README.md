@@ -38,7 +38,7 @@ Um sistema backend envia dados de pedidos que devem ser:
 
 ### 🏷️ Nome do Package
 ```
-ZPKG_COUNTRIES_INTEGRATION
+ZPKG_ORDER_CLASSIFICATION
 ```
 ![Fluxo](imagens/Screenshot_2.png)
 
@@ -51,7 +51,7 @@ ZPKG_COUNTRIES_INTEGRATION
 
 ### 🏷️ Nome do iFlow
 ```
-IF_SEND_MESSAGE_DISCORD
+IFL_ORDER_CLASSIFICATION_XMLMODIFIER
 ```
 ![Fluxo](imagens/Screenshot_4.png)
 
@@ -64,9 +64,50 @@ IF_SEND_MESSAGE_DISCORD
 
 # 🔹 2. HTTPS Sender (Trigger)
 ```
-Endpoint: /discord
+Endpoint: /order/classify
 ```
 ![Fluxo](imagens/Screenshot_6.png)
+
+<br>
+
+# 🔹 3. Content Modifier
+
+### ➕ Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_7.png)
+
+<br>
+
+### 🏷️ Renomeando o Content Modifier
+```
+Nome: CM_setProperty
+```
+![Fluxo](imagens/Screenshot_8.png)
+
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+Message Header
+```
+| Campo     | Tipo Valor  |         Valor       |      Tipo        |
+| --------- | ------------| ------------------- |------------------|
+| Name      | Source Type |     Source Value    | Data Type        |
+|  status   | Constant    | {{PROCESSED}}       |                  |
+|  orderId  | XPath       |/Order/OrderID       | java.lang.String |
+| customerI | XPath       | /Order/CustomerID   | java.lang.String |
+|  amount   | XPath       | /Order/Amount       | java.lang.String |
+|  region   | XPath       | /Order/Region       | java.lang.String |
+
+```
+![Fluxo](imagens/Screenshot_9.png)
+
+<br>
+
+
+
+
+
+
 
 📥 Input Payload
 <Order>
