@@ -286,39 +286,12 @@ def Message processData(Message message) {
 <br>
 
 # 🔹 8. Monitoramento
-
-
+### Monitor Message Processamento
 ![Fluxo](imagens/Screenshot_22.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
- 
-
-
-
+<br>
+### Log de anexo dp Monitor Message
+![Fluxo](imagens/Screenshot_23.png)
 
 <br>
 <br>
