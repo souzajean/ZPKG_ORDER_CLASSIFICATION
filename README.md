@@ -134,15 +134,48 @@ GS_Classificacao
 
 <br>
 
-### ➕ Adicionando Groovy Script
+### ➕ Lógica do ordem de classificação
 ![Fluxo](imagens/Screenshot_13.png)
 
 <br>
 
-Classifies order based on amount:
-LOW
-MEDIUM
-HIGH
+# 🔹 5. Content Modifier
+
+### ➕ Adicionando o Content Modifier
+![Fluxo](imagens/Screenshot_14.png)
+
+<br>
+
+### 🏷️ Renomeando o Content Modifier
+```
+Nome: CM_XMLFinal
+```
+![Fluxo](imagens/Screenshot_15.png)
+
+
+<br>
+
+### ⚙️ Configuração do Content Modifier
+📩 Message Body
+- **Type:** Expression  
+- **Body:**
+```
+<ProcessedOrder>
+    <OrderID>${property.orderId}</OrderID>
+    <CustomerID>${property.customerId}</CustomerID>
+    
+    <Amount>${property.amount}</Amount>
+    <Region>${property.region}</Region>
+    
+    <Category>${property.category}</Category>
+    
+    <Status>${property.status}</Status>
+    <ProcessedAt>${date:now:yyyy-MM-dd HH:mm:ss}</ProcessedAt>
+</ProcessedOrder>
+```
+![Fluxo](imagens/Screenshot_16.png)
+
+<br>
 
 
 
