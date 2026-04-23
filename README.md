@@ -1,5 +1,5 @@
 # 🚀 ZPKG_ORDER_CLASSIFICATION_CPI
-## SAP BTP CPI | Intelligent Order Classification with XML Modifier & Groovy
+## SAP BTP CPI | Classificação Inteligente de Pedidos com XML Modifier & Groovy
 
 ## 📌 Objetivo da solução
 
