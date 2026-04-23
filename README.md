@@ -251,7 +251,10 @@ def Message processData(Message message) {
 # 🔹 7. Postman
 
 ### ➕ Enviando o Payload
-📥 Input Payload
+📥 Enviando Payload
+Method: POST
+URL: /order/classify
+Body:
 ```
 <Order>
     <OrderID>5001</OrderID>
@@ -311,22 +314,9 @@ def Message processData(Message message) {
 
 
 
+   
+ 
 
-
-
-
-
-
-
-
-
-🚀 Endpoint   
-POST /order/classify
-🧪 How to Test (Postman)
-Method: POST
-URL: /order/classify
-Body: XML
-Send request and validate response
 
 
 
