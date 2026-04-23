@@ -102,8 +102,13 @@ Nome: CM_setProperty
 
 <br>
 
-### ⚙️ Externalizadno o parametos 
-PROCESSED
+### ⚙️ Externalização de Parâmetros
+
+O parâmetro abaixo foi externalizado para facilitar manutenção e reutilização do iFlow:
+
+| Parâmetro  | Valor Padrão |
+|------------|--------------|
+| PROCESSED  | PROCESSED    |
 ![Fluxo](imagens/Screenshot_10.png)
 
 <br>
