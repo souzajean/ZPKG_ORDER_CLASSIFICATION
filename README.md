@@ -25,7 +25,48 @@ Um sistema backend envia dados de pedidos que devem ser:
 
 # 🏗️ 🔧 Arquitetura do iFlow
 
-HTTPS Sender → Content Modifier (Properties) → Groovy Script → Content Modifier (XML) → Logging → HTTPS Response
+<br><br>
+
+# 🔄 1. Fluxo da Integração
+
+<br>
+
+### 🧱 Criando o Package
+![Fluxo](imagens/Screenshot_1.png)
+
+<br><br>
+
+### 🏷️ Nome do Package
+```
+ZPKG_COUNTRIES_INTEGRATION
+```
+![Fluxo](imagens/Screenshot_2.png)
+
+<br>
+
+### ➕ Adicionando o Artefato
+![Fluxo](imagens/Screenshot_3.png)
+
+<br>
+
+### 🏷️ Nome do iFlow
+```
+IF_SEND_MESSAGE_DISCORD
+```
+![Fluxo](imagens/Screenshot_4.png)
+
+<br>
+
+### ➕ Adicionando o Adapter
+![Fluxo](imagens/Screenshot_5.png)
+
+<br> 
+
+# 🔹 2. HTTPS Sender (Trigger)
+```
+Endpoint: /discord
+```
+![Fluxo](imagens/Screenshot_6.png)
 
 📥 Input Payload
 <Order>
