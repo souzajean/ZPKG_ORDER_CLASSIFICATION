@@ -11,9 +11,9 @@ A solução recebe um payload XML via HTTP, extrai os dados utilizando XPath, ap
 
 Um sistema backend envia dados de pedidos que devem ser:
 
-✅ Validados
-📊 Classificados com base no valor
-🔄 Enriquecidos com informações de processamento 
+✅ Validados   
+📊 Classificados com base no valor   
+🔄 Enriquecidos com informações de processamento    
 
 <br>
 
