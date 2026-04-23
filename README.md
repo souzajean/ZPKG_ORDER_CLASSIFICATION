@@ -248,43 +248,28 @@ def Message processData(Message message) {
 
 <br>
 
-# 🔹 7. Content Modifier
+# 🔹 7. Postman
 
-### ➕ Adicionando o Content Modifier
+### ➕ Enviando o Payload
+📥 Input Payload
+```
+<Order>
+    <OrderID>5001</OrderID>
+    <CustomerID>2002</CustomerID>
+    <Amount>750</Amount>
+    <Region>SP</Region>
+</Order>
+```
 ![Fluxo](imagens/Screenshot_20.png)
 
 <br>
 
-### 🏷️ Renomeando o Content Modifier
-```
-Nome: CM_XMLFinal
-```
+
+
+
 ![Fluxo](imagens/Screenshot_21.png)
 
 
-<br>
-
-### ⚙️ Configuração do Content Modifier
-Construindo a resposta final em XML
-Adiciona timestamp (data/hora) e status   
-
-📩 Message Body
-- **Type:** Expression  
-- **Body:**
-```
-<ProcessedOrder>
-    <OrderID>${property.orderId}</OrderID>
-    <CustomerID>${property.customerId}</CustomerID>
-    
-    <Amount>${property.amount}</Amount>
-    <Region>${property.region}</Region>
-    
-    <Category>${property.category}</Category>
-    
-    <Status>${property.status}</Status>
-    <ProcessedAt>${date:now:yyyy-MM-dd HH:mm:ss}</ProcessedAt>
-</ProcessedOrder>
-```
 ![Fluxo](imagens/Screenshot_22.png)
 
 
@@ -314,15 +299,6 @@ Adiciona timestamp (data/hora) e status
 
 
 
-📥 Input Payload
-<Order>
-    <OrderID>5001</OrderID>
-    <CustomerID>2002</CustomerID>
-    <Amount>750</Amount>
-    <Region>SP</Region>
-</Order>
-
-
 
 
 
@@ -349,6 +325,17 @@ Method: POST
 URL: /order/classify
 Body: XML
 Send request and validate response
+
+
+
+<br>
+<br>
+
+---
+
+## 📦 Exemplo prático – iFlow para baixar
+
+📦 [Download do iFlow – CPI_ZPKG_ORDER_CLASSIFICATION](https://github.com/souzajean/ZPKG_ORDER_CLASSIFICATION/raw/main/Package/IFL_ORDER_CLASSIFICATION_XMLMODIFIER.zip)
 
 
 
