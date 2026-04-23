@@ -202,11 +202,17 @@ Adiciona timestamp (data/hora) e status
 <br>
 
 # 🔹 6. Groovy Script
-Classifica o pedido com base no valor:
+Registra o payload final no Message Monitoring
 
-- LOW → BAIXO   
-- MEDIUM → MÉDIO
-- HIGH → ALTO
+📤 Payload de Saída
+5001 2002 750 SP MEDIUM PROCESSED 2026-04-22 10:00:00
+🧠 Principais Funcionalidades
+
+✔️ Extração de dados baseada em XPath   
+✔️ Regras de negócio com Script Groovy   
+✔️ Transformação de XML utilizando Content Modifier   
+✔️ Log de payload para monitoramento   
+✔️ Pronto para externalização de parâmetros   
 
 ### ➕ Adicionando Groovy Script
 ![Fluxo](imagens/Screenshot_17.png)
@@ -222,6 +228,7 @@ GS_Log_Payload_Final
 <br>
 
 ### ➕ Lógica do ordem de classificação
+
 ```
 import com.sap.gateway.ip.core.customdev.util.Message
 
