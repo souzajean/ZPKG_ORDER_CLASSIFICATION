@@ -114,7 +114,7 @@ O parâmetro abaixo foi externalizado para facilitar manutenção e reutilizaç�
 
 <br>
 
-# 🔹 3. Groovy Script
+# 🔹 4. Groovy Script
 Classifica o pedido com base no valor:
 
 - LOW → BAIXO   
@@ -127,7 +127,7 @@ Classifica o pedido com base no valor:
 <br>
 
 ### 🏷️ Renomeando o Groovy Script
-![Fluxo](imagens/Screenshot_19.png)
+![Fluxo](imagens/Screenshot_12.png)
 ```
 GS_Classificacao
 ```
@@ -135,7 +135,7 @@ GS_Classificacao
 <br>
 
 ### ➕ Adicionando Groovy Script
-![Fluxo](imagens/Screenshot_20.png)
+![Fluxo](imagens/Screenshot_13.png)
 
 <br>
 
