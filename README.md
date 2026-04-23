@@ -87,28 +87,15 @@ Nome: CM_setProperty
 <br>
 
 ### ⚙️ Configuração do Content Modifier
-Message Header
+📩 Message Header
 ```
-| Campo     | Tipo Valor  |         Valor       |      Tipo        |
-| --------- | ------------| ------------------- |------------------|
-| Name      | Source Type |     Source Value    | Data Type        |
-|  status   | Constant    | {{PROCESSED}}       |                  |
-|  orderId  | XPath       |/Order/OrderID       | java.lang.String |
-| customerI | XPath       | /Order/CustomerID   | java.lang.String |
-|  amount   | XPath       | /Order/Amount       | java.lang.String |
-|  region   | XPath       | /Order/Region       | java.lang.String |
-
-```
-```
-## 📩 Message Header
-
 | Name        | Source Type | Source Value        | Data Type        |
-|-------------|------------|---------------------|------------------|
-| status      | Constant   | {{PROCESSED}}       |                  |
-| orderId     | XPath      | /Order/OrderID      | java.lang.String |
-| customerId  | XPath      | /Order/CustomerID   | java.lang.String |
-| amount      | XPath      | /Order/Amount       | java.lang.String |
-| region      | XPath      | /Order/Region       | java.lang.String |
+|-------------|-------------|---------------------|------------------|
+| status      | Constant    | {{PROCESSED}}       |                  |
+| orderId     | XPath       | /Order/OrderID      | java.lang.String |
+| customerId  | XPath       | /Order/CustomerID   | java.lang.String |
+| amount      | XPath       | /Order/Amount       | java.lang.String |
+| region      | XPath       | /Order/Region       | java.lang.String |
 
 ```
 
