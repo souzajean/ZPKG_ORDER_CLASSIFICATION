@@ -1,21 +1,29 @@
 # 🚀 ZPKG_ORDER_CLASSIFICATION_CPI
 ## SAP BTP CPI | Intelligent Order Classification with XML Modifier & Groovy
 
-## 📌 Overview
+## 📌 Objetivo da solução
 
-This project demonstrates the development of an Integration Flow (iFlow) in SAP BTP Integration Suite (CPI) focused on order processing and classification.
+Este projeto demonstra o desenvolvimento de um Integration Flow (iFlow) no SAP BTP Integration Suite (CPI), focado no processamento e classificação de pedidos.
 
-The solution receives an XML payload via HTTP, extracts data using XPath, applies business rules with Groovy, and returns an enriched XML response.
+A solução recebe um payload XML via HTTP, extrai os dados utilizando XPath, aplica regras de negócio com Groovy e retorna uma resposta XML enriquecida.
 
-🎯 Scenario
+### 🎯 Cenário
 
-A backend system sends order data that must be:
+Um sistema backend envia dados de pedidos que devem ser:
 
-Validated   
-Classified based on amount   
-Enriched with processing information   
+✅ Validados
+📊 Classificados com base no valor
+🔄 Enriquecidos com informações de processamento 
 
-🧩 iFlow Architecture
+<br>
+
+![Fluxo](imagens/capa-linkedin.png)
+
+---
+
+<br>
+
+# 🏗️ 🔧 Arquitetura do iFlow
 
 HTTPS Sender → Content Modifier (Properties) → Groovy Script → Content Modifier (XML) → Logging → HTTPS Response
 
